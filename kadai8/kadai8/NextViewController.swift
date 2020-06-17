@@ -16,8 +16,7 @@ class NextViewController: UIViewController,UICollectionViewDataSource, UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = sdgsCollectionView.dequeueReusableCell(withReuseIdentifier: "sdgsCollectionCell", for: indexPath) as! sdgsCollectionViewCell
-        
+        let cell = sdgsCollectionView.dequeueReusableCell(withReuseIdentifier: "sdgsCollectionCell", for: indexPath)
         let photoImageView = cell.contentView.viewWithTag(1)  as! UIImageView
         let photoImage = UIImage(named: photos[indexPath.row])
         photoImageView.image = photoImage
@@ -58,4 +57,5 @@ class NextViewController: UIViewController,UICollectionViewDataSource, UICollect
     */
 
     }
+    
 }

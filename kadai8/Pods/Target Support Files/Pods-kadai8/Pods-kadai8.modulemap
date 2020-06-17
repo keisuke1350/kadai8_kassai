@@ -1,0 +1,6 @@
+framework module Pods_kadai8 {
+  umbrella header "Pods-kadai8-umbrella.h"
+
+  export *
+  module * { export * }
+}
