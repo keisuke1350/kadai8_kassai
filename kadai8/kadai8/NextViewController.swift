@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
-class NextViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
+class NextViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout, IndicatorInfoProvider {
+    
+
+    var itemInfo: IndicatorInfo = "First"
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photos.count
@@ -56,6 +60,10 @@ class NextViewController: UIViewController,UICollectionViewDataSource, UICollect
     }
     */
 
+    }
+    
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return itemInfo
     }
     
 }

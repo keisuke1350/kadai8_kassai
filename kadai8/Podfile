@@ -6,18 +6,17 @@ target 'kadai8' do
   use_frameworks!
 
   # Pods for kadai8
-  pod 'FBSDKLoginKit'
   # add the Firebase pod for Google Analytics
   pod 'Firebase/Analytics'
   # add pods for any other desired Firebase products
   # https://firebase.google.com/docs/ios/setup#available-pods
-  #pod 'FirebaseUI'
+  pod 'FirebaseUI'
   #pod 'FirebaseUI/Auth'
   #pod 'FirebaseUI/Google'
   #pod 'FirebaseUI/Facebook'
   #pod 'FirebaseUI/Twitter'
   #pod 'FirebaseUI/Phone'
-  pod 'FacebookSDK'
+  #pod 'FacebookSDK'
   pod 'Firebase/Core'
   #pod "Gemini"
   pod 'TextFieldEffects'
@@ -25,5 +24,7 @@ target 'kadai8' do
   pod 'EasySocialButton'
   pod 'Parchment'
   pod ‘DisplaySwitcher’, '~> 2.0’
-
+  pod 'XLPagerTabStrip', '~> 9.0'
+  #pod 'FBSDKLoginKit'
+  pod 'PKHUD'
 end

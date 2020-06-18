@@ -7,16 +7,29 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseUI
+//import FBSDKCoreKit
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    
+    override init() {
+        super.init()
+        // Firebase関連の機能を使う前に必要
+//        FirebaseApp.configure()
+    }
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 //        FirebaseApp.configure()
 //        ApplicationDelegate.shared.application（application,didFinishLaunchingWithOptions;:launchOptions
+//        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
 
@@ -34,11 +47,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
     
-//    func applicationDidBecomeActive(_ application: UIApplication) {
-//        ApplicationDelegate.shared.application（application、didFinishLaunchingWithOptions:launchOptions
+//    func application(_ application: UIApplication,open url: URL,sourceApplication: String?,annotation: Any) -> Bool {
+//            return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
 //    }
+
+        
+//    func applicationDidBecomeActive(_ application: UIApplication) {
+//            FBSDKAppEvents.activateApp()
+//    }
+    
+    
     
 
 
 }
+
 

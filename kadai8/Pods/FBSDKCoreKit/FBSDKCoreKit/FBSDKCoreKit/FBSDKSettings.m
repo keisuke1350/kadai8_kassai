@@ -22,16 +22,15 @@
 #import "FBSDKAccessTokenExpirer.h"
 #import "FBSDKAppEvents+Internal.h"
 #import "FBSDKCoreKit.h"
-#import "FBSDKTypeUtility.h"
 
 #define FBSDKSETTINGS_PLIST_CONFIGURATION_SETTING_IMPL(TYPE, PLIST_KEY, GETTER, SETTER, DEFAULT_VALUE, ENABLE_CACHE) \
 static TYPE *g_##PLIST_KEY = nil; \
 + (TYPE *)GETTER \
 { \
-  if ((g_##PLIST_KEY == nil) && ENABLE_CACHE) { \
+  if (!g_##PLIST_KEY && ENABLE_CACHE) { \
     g_##PLIST_KEY = [[[NSUserDefaults standardUserDefaults] objectForKey:@#PLIST_KEY] copy]; \
   } \
-  if (g_##PLIST_KEY == nil) { \
+  if (!g_##PLIST_KEY) { \
     g_##PLIST_KEY = [[[NSBundle mainBundle] objectForInfoDictionaryKey:@#PLIST_KEY] copy] ?: DEFAULT_VALUE; \
   } \
   return g_##PLIST_KEY; \
@@ -39,7 +38,7 @@ static TYPE *g_##PLIST_KEY = nil; \
 + (void)SETTER:(TYPE *)value { \
   g_##PLIST_KEY = [value copy]; \
   if (ENABLE_CACHE) { \
-    if (value != nil) { \
+    if (value) { \
       [[NSUserDefaults standardUserDefaults] setObject:value forKey:@#PLIST_KEY]; \
     } else { \
       [[NSUserDefaults standardUserDefaults] removeObjectForKey:@#PLIST_KEY]; \
@@ -79,7 +78,9 @@ static NSString *const autoLogAppEventsEnabledNotSetWarning =
   "Learn more: https://developers.facebook.com/docs/app-events/getting-started-app-events-ios#disable-auto-events.";
 static NSString *const advertiserIDCollectionEnabledNotSetWarning =
   @"<Warning>: You haven't set a value for FacebookAdvertiserIDCollectionEnabled. Set the flag to TRUE if "
-  "you want to collect Advertiser ID for better advertising and analytics results.";
+  "you want to collect Advertiser ID for better advertising and analytics results. To request user consent "
+  "before collecting data, set the flag value to FALSE, then change to TRUE once user consent is received. "
+  "Learn more: https://developers.facebook.com/docs/app-events/getting-started-app-events-ios#disable-auto-events.";
 static NSString *const advertiserIDCollectionEnabledFalseWarning =
   @"<Warning>: The value for FacebookAdvertiserIDCollectionEnabled is currently set to FALSE so you're sending app "
   "events without collecting Advertiser ID. This can affect the quality of your advertising and analytics results.";
@@ -344,8 +345,8 @@ FBSDKSETTINGS_PLIST_CONFIGURATION_SETTING_IMPL(NSNumber, FacebookCodelessDebugLo
     NSInteger initialBitmask = 0;
     NSInteger usageBitmask = 0;
     for (int i = 0; i < keys.count; i++) {
-      NSNumber *plistValue = [[NSBundle mainBundle] objectForInfoDictionaryKey:[FBSDKTypeUtility array:keys objectAtIndex:i]];
-      BOOL initialValue = [(plistValue ?: [FBSDKTypeUtility array:defaultValues objectAtIndex:i]) boolValue];
+      NSNumber *plistValue = [[NSBundle mainBundle] objectForInfoDictionaryKey:keys[i]];
+      BOOL initialValue = [(plistValue ?: defaultValues[i]) boolValue];
       initialBitmask |= (initialValue ? 1 : 0) << i;
       usageBitmask |= (plistValue != nil ? 1 : 0) << i;
     }
