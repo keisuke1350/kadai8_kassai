@@ -23,7 +23,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.440221410327-mhc5l9lubo0k1c0sipjee2raqvadrtlu</string>
+				<string>fb190178775650732</string>
 			</array>
 		</dict>
 		<dict>
@@ -31,12 +31,23 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb190178775650732</string>
+				<string>com.googleusercontent.apps.440221410327-mhc5l9lubo0k1c0sipjee2raqvadrtlu</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>190178775650732</string>
+	<key>FacebookDisplayName</key>
+	<string>SDGsToDoApp</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIApplicationSceneManifest</key>

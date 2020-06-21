@@ -117,7 +117,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjY-Iv-oVz" customClass="AZSocialButton" customModule="EasySocialButton">
-                                <rect key="frame" x="57" y="541" width="300" height="45"/>
+                                <rect key="frame" x="57" y="486" width="300" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="aku-iV-LeA"/>
                                     <constraint firstAttribute="height" constant="45" id="qIW-Mw-gao"/>
@@ -134,9 +134,12 @@
                                         <color key="value" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tappedFBButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l51-og-kTx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KK6-wi-bsf" customClass="AZSocialButton" customModule="EasySocialButton">
-                                <rect key="frame" x="57" y="486" width="300" height="45"/>
+                                <rect key="frame" x="57" y="541" width="300" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="Dxh-ZY-csp"/>
                                     <constraint firstAttribute="height" constant="45" id="iNU-lf-Ozt"/>
@@ -157,10 +160,14 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="ic_google"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tappedGoogleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="voc-HF-sBe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="hjY-Iv-oVz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4jf-6h-AAG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4EC-EL-DNf" secondAttribute="bottom" id="AAc-fE-iqH"/>
                             <constraint firstItem="4EC-EL-DNf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Dss-zF-LtE"/>
                             <constraint firstItem="4EC-EL-DNf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="E1o-8w-dos"/>
@@ -169,18 +176,19 @@
                             <constraint firstItem="DFY-39-sr9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="KTb-eS-JV5"/>
                             <constraint firstItem="JxA-Jn-RI5" firstAttribute="top" secondItem="TJo-K5-uGn" secondAttribute="bottom" constant="30" id="KbX-Yj-dRv"/>
                             <constraint firstItem="DFY-39-sr9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R6G-ag-TBm"/>
-                            <constraint firstItem="KK6-wi-bsf" firstAttribute="top" secondItem="JxA-Jn-RI5" secondAttribute="bottom" constant="20" id="SwC-cc-eer"/>
+                            <constraint firstItem="KK6-wi-bsf" firstAttribute="top" secondItem="hjY-Iv-oVz" secondAttribute="bottom" constant="10" id="YOp-gN-t0S"/>
                             <constraint firstItem="TJo-K5-uGn" firstAttribute="top" secondItem="DFY-39-sr9" secondAttribute="bottom" constant="-10" id="ZpP-96-VSy"/>
-                            <constraint firstItem="KK6-wi-bsf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aKd-3u-hl6"/>
-                            <constraint firstItem="hjY-Iv-oVz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="emM-Hc-LeU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4EC-EL-DNf" secondAttribute="trailing" id="fFa-lP-2zW"/>
                             <constraint firstItem="JxA-Jn-RI5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fgm-m3-gsJ"/>
-                            <constraint firstItem="hjY-Iv-oVz" firstAttribute="top" secondItem="KK6-wi-bsf" secondAttribute="bottom" constant="10" id="ujn-WH-RvA"/>
+                            <constraint firstItem="hjY-Iv-oVz" firstAttribute="top" secondItem="JxA-Jn-RI5" secondAttribute="bottom" constant="20" id="uKf-Bq-waX"/>
+                            <constraint firstItem="KK6-wi-bsf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wrm-Aa-0US"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="S72-9J-a5J"/>
                     <connections>
+                        <outlet property="authFBButton" destination="hjY-Iv-oVz" id="Prk-FN-Cb1"/>
+                        <outlet property="authGoogleButton" destination="KK6-wi-bsf" id="nsz-OT-5bF"/>
                         <outlet property="passwardTextField" destination="Ta1-QF-xM1" id="fHt-10-1fw"/>
                     </connections>
                 </viewController>

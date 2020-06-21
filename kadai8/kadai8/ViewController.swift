@@ -17,13 +17,16 @@ class ViewController: UIViewController, UITextFieldDelegate, FUIAuthDelegate{
     
     @IBOutlet weak var passwardTextField: KaedeTextField!
     
-//    var authUI: FUIAuth { get { return FUIAuth.defaultAuthUI()!}}
-//    // 認証に使用するプロバイダの選択
-//    let providers: [FUIAuthProvider] = [
-//        FUIGoogleAuth(),
-//        FUIFacebookAuth(),
-//        FUIEmailAuth()
-//    ]
+    @IBOutlet weak var authFBButton: UIButton!
+    
+    @IBOutlet weak var authGoogleButton: UIButton!
+    
+    var authUI: FUIAuth {get { return FUIAuth.defaultAuthUI()!}}
+    //認証に使用するプロバイダの選択
+    let providers: [FUIAuthProvider] = [
+        FUIFacebookAuth(),
+        FUIGoogleAuth()
+    ]
     
     
     override func viewDidLoad() {
@@ -31,9 +34,10 @@ class ViewController: UIViewController, UITextFieldDelegate, FUIAuthDelegate{
         // Do any additional setup after loading the view.
         passwardTextField.delegate = self
         passwardTextField.isSecureTextEntry = true
-//        self.authUI.delegate = self
-//        self.authUI.providers = providers
-//        authButton.addTarget(self, action: #selector(self.authButtonTapped(_:)), for: .touchUpInside)
+        self.authUI.delegate = self
+        self.authUI.providers = providers
+        authFBButton.addTarget(self, action: #selector(self.tappedFBButton(_:)), for: .touchUpInside)
+        authGoogleButton.addTarget(self, action: #selector(tappedGoogleButton(_:)), for: .touchUpInside)
     }
 
     @IBAction func tappedLoginButton(_ sender: Any) {
@@ -42,22 +46,27 @@ class ViewController: UIViewController, UITextFieldDelegate, FUIAuthDelegate{
         HUD.flash(.success, delay: 1)
     }
     
-//    @IBAction func authButtonTapped(_ sender: Any) {
-//        let authViewController = self.authUI.authViewController()
-//        self.present(authViewController, animated: true, completion: nil)
-//    }
+    @IBAction func tappedFBButton(_ sender: AnyObject) {
+        //FirebasaseUIのviewの取得
+        let authViewController = self.authUI.authViewController()
+        //FirebaseUIのviewの表示
+        self.present(authViewController, animated: true, completion: nil)
+    }
+
+    @IBAction func tappedGoogleButton(_ sender: AnyObject) {
+        //FirebasaseUIのviewの取得
+        let authViewController = self.authUI.authViewController()
+        //FirebaseUIのviewの表示
+        self.present(authViewController, animated: true, completion: nil)
+    }
     
-//    //　認証画面から離れたときに呼ばれる（キャンセルボタン押下含む）
-//    public func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?){
-//        // 認証に成功した場合
-//        if error == nil {
-//            let vc = TabStripViewController()
-//            navigationController?.pushViewController(vc, animated: true)
-//        } else {
-//        //失敗した場合
-//            print("error")
-//        }
-//    }
+    public func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
+        if error == nil{
+            let vc = TabStripViewController()
+            navigationController?.pushViewController(vc, animated: true)
+            HUD.flash(.success, delay: 1)
+        }
+    }
     
     
     

@@ -9,7 +9,6 @@
 import UIKit
 import Firebase
 import FirebaseUI
-//import FBSDKCoreKit
 
 
 
@@ -21,9 +20,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     override init() {
         super.init()
         // Firebase関連の機能を使う前に必要
-//        FirebaseApp.configure()
+        FirebaseApp.configure()
     }
     
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        let sourceApplication = options[UIApplication.OpenURLOptionsKey.sourceApplication] as! String?
+        //Googleもしくはfacebook認証の場合trueを返す
+        if FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication) ?? false {
+            return true
+        }
+        //電話番号認証の場合、trueを返す
+        if Auth.auth().canHandle(url){
+            return true
+        }
+        return false
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification notification: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        if Auth.auth().canHandleNotification(notification){
+            completionHandler(.noData)
+            return
+        }
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
