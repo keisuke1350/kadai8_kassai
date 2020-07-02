@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TaskDetailViewController" customModule="kadai8" customModuleProvider="target">
+            <connections>
+                <outlet property="SDGsImage" destination="Los-c9-EfW" id="Jc9-C2-uKX"/>
+                <outlet property="memoTextView" destination="LVO-CX-Nid" id="ixA-9u-bD6"/>
+                <outlet property="selectSDGs" destination="FSZ-rS-JdB" id="c2B-4d-qGv"/>
+                <outlet property="titleTextField" destination="LCr-xs-Trw" id="o99-sd-33X"/>
+                <outlet property="view" destination="5Fy-Ju-J36" id="GcD-CB-bEY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="5Fy-Ju-J36">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQu-W7-6WH">
+                    <rect key="frame" x="20" y="54" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LCr-xs-Trw">
+                    <rect key="frame" x="20" y="80" width="374" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メモ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHX-gi-j5A">
+                    <rect key="frame" x="20" y="124" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LVO-CX-Nid">
+                    <rect key="frame" x="20" y="150" width="374" height="180"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="4mv-xd-fsd"/>
+                    </constraints>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select SDGs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwZ-vD-Cqs">
+                    <rect key="frame" x="20" y="340" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FSZ-rS-JdB">
+                    <rect key="frame" x="20" y="366" width="374" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Los-c9-EfW">
+                    <rect key="frame" x="157" y="420" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="79h-q1-mHI"/>
+                        <constraint firstAttribute="height" constant="100" id="8eX-qS-HRl"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="uFv-We-AjY" firstAttribute="trailing" secondItem="LCr-xs-Trw" secondAttribute="trailing" constant="20" id="01C-ZS-R6r"/>
+                <constraint firstItem="LCr-xs-Trw" firstAttribute="leading" secondItem="uFv-We-AjY" secondAttribute="leading" constant="20" id="0ka-IH-c7k"/>
+                <constraint firstItem="uFv-We-AjY" firstAttribute="trailing" secondItem="WQu-W7-6WH" secondAttribute="trailing" constant="20" id="3WC-G7-XGi"/>
+                <constraint firstItem="FwZ-vD-Cqs" firstAttribute="top" secondItem="LVO-CX-Nid" secondAttribute="bottom" constant="10" id="3ep-qG-6Lt"/>
+                <constraint firstItem="LVO-CX-Nid" firstAttribute="top" secondItem="aHX-gi-j5A" secondAttribute="bottom" constant="5" id="9GC-lO-V2N"/>
+                <constraint firstItem="FwZ-vD-Cqs" firstAttribute="centerX" secondItem="5Fy-Ju-J36" secondAttribute="centerX" id="BN9-VD-6KK"/>
+                <constraint firstItem="aHX-gi-j5A" firstAttribute="leading" secondItem="uFv-We-AjY" secondAttribute="leading" constant="20" id="Bfd-f6-2Tp"/>
+                <constraint firstItem="LCr-xs-Trw" firstAttribute="top" secondItem="WQu-W7-6WH" secondAttribute="bottom" constant="5" id="CJz-lG-YTC"/>
+                <constraint firstItem="FSZ-rS-JdB" firstAttribute="centerX" secondItem="5Fy-Ju-J36" secondAttribute="centerX" id="Lab-uu-dk4"/>
+                <constraint firstItem="uFv-We-AjY" firstAttribute="trailing" secondItem="FwZ-vD-Cqs" secondAttribute="trailing" constant="20" id="NKn-ZH-zGW"/>
+                <constraint firstItem="Los-c9-EfW" firstAttribute="centerX" secondItem="5Fy-Ju-J36" secondAttribute="centerX" id="PLg-SB-iBr"/>
+                <constraint firstItem="FSZ-rS-JdB" firstAttribute="leading" secondItem="uFv-We-AjY" secondAttribute="leading" constant="20" id="YXm-yn-yA3"/>
+                <constraint firstItem="Los-c9-EfW" firstAttribute="top" secondItem="FSZ-rS-JdB" secondAttribute="bottom" constant="20" id="Z1K-iR-kQV"/>
+                <constraint firstItem="WQu-W7-6WH" firstAttribute="leading" secondItem="uFv-We-AjY" secondAttribute="leading" constant="20" id="b4c-uC-VYV"/>
+                <constraint firstItem="aHX-gi-j5A" firstAttribute="top" secondItem="LCr-xs-Trw" secondAttribute="bottom" constant="10" id="bAx-io-24I"/>
+                <constraint firstItem="LCr-xs-Trw" firstAttribute="centerX" secondItem="5Fy-Ju-J36" secondAttribute="centerX" id="brf-E3-wvN"/>
+                <constraint firstItem="uFv-We-AjY" firstAttribute="trailing" secondItem="LVO-CX-Nid" secondAttribute="trailing" constant="20" id="fnZ-EB-OU2"/>
+                <constraint firstItem="uFv-We-AjY" firstAttribute="trailing" secondItem="aHX-gi-j5A" secondAttribute="trailing" constant="20" id="n8t-rT-4eg"/>
+                <constraint firstItem="uFv-We-AjY" firstAttribute="trailing" secondItem="FSZ-rS-JdB" secondAttribute="trailing" constant="20" id="oAM-G4-kkg"/>
+                <constraint firstItem="LVO-CX-Nid" firstAttribute="centerX" secondItem="5Fy-Ju-J36" secondAttribute="centerX" id="qYA-F7-BA4"/>
+                <constraint firstItem="FSZ-rS-JdB" firstAttribute="top" secondItem="FwZ-vD-Cqs" secondAttribute="bottom" constant="5" id="sB7-aE-j4A"/>
+                <constraint firstItem="LVO-CX-Nid" firstAttribute="leading" secondItem="uFv-We-AjY" secondAttribute="leading" constant="20" id="tHg-5v-qQ6"/>
+                <constraint firstItem="WQu-W7-6WH" firstAttribute="top" secondItem="uFv-We-AjY" secondAttribute="top" constant="10" id="wUw-Hy-ISq"/>
+                <constraint firstItem="FwZ-vD-Cqs" firstAttribute="leading" secondItem="uFv-We-AjY" secondAttribute="leading" constant="20" id="zml-RH-4hz"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="uFv-We-AjY"/>
+            <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
+        </view>
+    </objects>
+</document>

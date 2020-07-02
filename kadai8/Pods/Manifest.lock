@@ -335,6 +335,7 @@ PODS:
   - FirebaseUI/Storage (8.4.2):
     - Firebase/Storage (~> 6.0)
     - SDWebImage (~> 5.0)
+  - FloatingPanel (1.7.5)
   - GoogleAppMeasurement (6.6.1):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
@@ -422,6 +423,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Core
   - FirebaseUI
+  - FloatingPanel
   - Parchment
   - PKHUD
   - Spring (from `https://github.com/MengTo/Spring.git`)
@@ -447,6 +449,7 @@ SPEC REPOS:
     - FirebaseInstallations
     - FirebaseStorage
     - FirebaseUI
+    - FloatingPanel
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
@@ -492,6 +495,7 @@ SPEC CHECKSUMS:
   FirebaseInstallations: 293f567159b6d66d1c990f13bb868066096c94ec
   FirebaseStorage: af7bdbd12177cf567df00904e3e3a93704f25b15
   FirebaseUI: e57e9b9c4340631151fbe67a14206d23d0974f37
+  FloatingPanel: bb17fd6fc7ae519f877f7bd30f4f6115a78acf07
   GoogleAppMeasurement: 2fd5c5a56c069db635c8e7b92d4809a9591d0a69
   GoogleDataTransport: 9a8a16f79feffc7f42096743de2a7c4815e84020
   GoogleDataTransportCCTSupport: 489c1265d2c85b68187a83a911913d190012158d
@@ -511,6 +515,6 @@ SPEC CHECKSUMS:
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: ae8350f69a82e4801323218a3ab452cea8a53546
+PODFILE CHECKSUM: 56dc673e0a4d982bb76c0c8c2abf88e9ccfa8d90
 
 COCOAPODS: 1.9.3

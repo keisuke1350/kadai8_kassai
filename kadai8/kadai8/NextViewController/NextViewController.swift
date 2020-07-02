@@ -8,11 +8,14 @@
 
 import UIKit
 import XLPagerTabStrip
+import FloatingPanel
 
-class NextViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout, IndicatorInfoProvider {
+class NextViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout, IndicatorInfoProvider, FloatingPanelControllerDelegate {
     
 
     var itemInfo: IndicatorInfo = "First"
+    
+    var floatingPanelController: FloatingPanelController!
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photos.count
@@ -49,7 +52,6 @@ class NextViewController: UIViewController,UICollectionViewDataSource, UICollect
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
         sdgsCollectionView.collectionViewLayout = layout
-
     /*
     // MARK: - Navigation
 
@@ -59,11 +61,47 @@ class NextViewController: UIViewController,UICollectionViewDataSource, UICollect
         // Pass the selected object to the new view controller.
     }
     */
-
+        floatingPanelController = FloatingPanelController()
+        floatingPanelController.surfaceView.cornerRadius = 24.0
+        
+        let semiModalViewController = SemiModalViewController()
+        floatingPanelController.delegate = self
+        floatingPanelController.set(contentViewController: semiModalViewController)
+        floatingPanelController.addPanel(toParent: self, belowView: nil, animated: false)
     }
+    
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        floatingPanelController.removePanelFromParent(animated: true)
+//    }
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return itemInfo
     }
     
+    func floatingPanel(_ vc: FloatingPanelController, layoutFor newCollection: UITraitCollection) -> FloatingPanelLayout? {
+        return CustomFloatingPanelLayout()
+    }
+    
+    class CustomFloatingPanelLayout: FloatingPanelLayout {
+        // 初期位置
+        var initialPosition: FloatingPanelPosition {
+            return .half
+        }
+        
+        // カスタマイズした高さ
+        func insetFor(position: FloatingPanelPosition) -> CGFloat? {
+            switch position {
+            case .full: return 16.0
+            case .half: return 216.0
+            case .tip: return 44.0
+            default: return nil
+            }
+        }
+        
+        // サポートする位置
+        var supportedPositions: Set<FloatingPanelPosition> {
+            return [.full, .half, .tip]
+        }
+    }
 }

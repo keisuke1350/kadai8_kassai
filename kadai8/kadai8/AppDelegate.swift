@@ -48,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        FirebaseApp.configure()
 //        ApplicationDelegate.shared.application（application,didFinishLaunchingWithOptions;:launchOptions
 //        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        sleep(2)
         return true
     }
 

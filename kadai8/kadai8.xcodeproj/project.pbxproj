@@ -21,13 +21,21 @@
 		32411061249AFD1B00732BC2 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3241105F249AFD1B00732BC2 /* AddViewController.swift */; };
 		32411062249AFD1B00732BC2 /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32411060249AFD1B00732BC2 /* AddViewController.xib */; };
 		32411064249B277600732BC2 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32411063249B277600732BC2 /* Task.swift */; };
+		3250716B24A05CF3006EF247 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3250716A24A05CF3006EF247 /* SplashViewController.swift */; };
+		3250717E24A36457006EF247 /* UserDefaultsRepositry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3250717D24A36457006EF247 /* UserDefaultsRepositry.swift */; };
+		3250718124A36C15006EF247 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3250718024A36C15006EF247 /* GoogleService-Info.plist */; };
+		3250718524A9E377006EF247 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3250718324A9E377006EF247 /* TaskDetailViewController.swift */; };
+		3250718624A9E377006EF247 /* TaskDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3250718424A9E377006EF247 /* TaskDetailViewController.xib */; };
+		3250718A24AA1982006EF247 /* SemiModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3250718824AA1982006EF247 /* SemiModalViewController.swift */; };
+		3250718B24AA1982006EF247 /* SemiModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3250718924AA1982006EF247 /* SemiModalViewController.xib */; };
+		3250719224AB4AA5006EF247 /* SemiModalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3250719024AB4AA5006EF247 /* SemiModalTableViewCell.swift */; };
+		3250719324AB4AA5006EF247 /* SemiModalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3250719124AB4AA5006EF247 /* SemiModalTableViewCell.xib */; };
 		32708D202499B92700097252 /* TabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32708D1E2499B92700097252 /* TabStripViewController.swift */; };
 		32708D212499B92700097252 /* TabStripViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32708D1F2499B92700097252 /* TabStripViewController.xib */; };
 		32708D242499EB8A00097252 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32708D222499EB8A00097252 /* SecondViewController.swift */; };
 		32708D252499EB8A00097252 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32708D232499EB8A00097252 /* SecondViewController.xib */; };
 		32708D28249A8E0100097252 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32708D26249A8E0100097252 /* ThirdViewController.swift */; };
 		32708D29249A8E0100097252 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32708D27249A8E0100097252 /* ThirdViewController.xib */; };
-		32708D2B249A910F00097252 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32708D2A249A910E00097252 /* GoogleService-Info.plist */; };
 		32708D2E249A992A00097252 /* toDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32708D2C249A992A00097252 /* toDoTableViewCell.swift */; };
 		32708D2F249A992A00097252 /* toDoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32708D2D249A992A00097252 /* toDoTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -49,13 +57,21 @@
 		3241105F249AFD1B00732BC2 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		32411060249AFD1B00732BC2 /* AddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
 		32411063249B277600732BC2 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		3250716A24A05CF3006EF247 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		3250717D24A36457006EF247 /* UserDefaultsRepositry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepositry.swift; sourceTree = "<group>"; };
+		3250718024A36C15006EF247 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3250718324A9E377006EF247 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
+		3250718424A9E377006EF247 /* TaskDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskDetailViewController.xib; sourceTree = "<group>"; };
+		3250718824AA1982006EF247 /* SemiModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiModalViewController.swift; sourceTree = "<group>"; };
+		3250718924AA1982006EF247 /* SemiModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SemiModalViewController.xib; sourceTree = "<group>"; };
+		3250719024AB4AA5006EF247 /* SemiModalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiModalTableViewCell.swift; sourceTree = "<group>"; };
+		3250719124AB4AA5006EF247 /* SemiModalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SemiModalTableViewCell.xib; sourceTree = "<group>"; };
 		32708D1E2499B92700097252 /* TabStripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabStripViewController.swift; sourceTree = "<group>"; };
 		32708D1F2499B92700097252 /* TabStripViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabStripViewController.xib; sourceTree = "<group>"; };
 		32708D222499EB8A00097252 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		32708D232499EB8A00097252 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		32708D26249A8E0100097252 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		32708D27249A8E0100097252 /* ThirdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
-		32708D2A249A910E00097252 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		32708D2C249A992A00097252 /* toDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDoTableViewCell.swift; sourceTree = "<group>"; };
 		32708D2D249A992A00097252 /* toDoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = toDoTableViewCell.xib; sourceTree = "<group>"; };
 		32708D30249AB39B00097252 /* kadai8.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kadai8.entitlements; sourceTree = "<group>"; };
@@ -99,29 +115,125 @@
 				32708D30249AB39B00097252 /* kadai8.entitlements */,
 				323252DB2497682B0018DE3C /* AppDelegate.swift */,
 				323252DD2497682B0018DE3C /* SceneDelegate.swift */,
-				323252DF2497682B0018DE3C /* ViewController.swift */,
-				323252E12497682B0018DE3C /* Main.storyboard */,
-				32411063249B277600732BC2 /* Task.swift */,
+				3250718224A9E334006EF247 /* TaskDetailViewController */,
+				3250717C24A36432006EF247 /* Repositories */,
+				3250718724AA195B006EF247 /* SemiModalViewController */,
+				3250717124A360EA006EF247 /* Models */,
+				3250717024A360C0006EF247 /* Loginsection */,
+				3250717224A36100006EF247 /* LanchScreen */,
 				323252E42497682D0018DE3C /* Assets.xcassets */,
-				323252E62497682D0018DE3C /* LaunchScreen.storyboard */,
 				323252E92497682D0018DE3C /* Info.plist */,
-				32708D2A249A910E00097252 /* GoogleService-Info.plist */,
+				3250718024A36C15006EF247 /* GoogleService-Info.plist */,
+				3250717724A36161006EF247 /* NextViewController */,
+				3250717824A3617B006EF247 /* TabStripViewController */,
+				3250717924A3619D006EF247 /* SecondViewController */,
+				3250717B24A361D5006EF247 /* ThirdViewController */,
+				3250717A24A361C6006EF247 /* AddViewController */,
+			);
+			path = kadai8;
+			sourceTree = "<group>";
+		};
+		3250717024A360C0006EF247 /* Loginsection */ = {
+			isa = PBXGroup;
+			children = (
+				323252E12497682B0018DE3C /* Main.storyboard */,
+				323252DF2497682B0018DE3C /* ViewController.swift */,
+			);
+			path = Loginsection;
+			sourceTree = "<group>";
+		};
+		3250717124A360EA006EF247 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				32411063249B277600732BC2 /* Task.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3250717224A36100006EF247 /* LanchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				323252E62497682D0018DE3C /* LaunchScreen.storyboard */,
+				3250716A24A05CF3006EF247 /* SplashViewController.swift */,
+			);
+			path = LanchScreen;
+			sourceTree = "<group>";
+		};
+		3250717724A36161006EF247 /* NextViewController */ = {
+			isa = PBXGroup;
+			children = (
 				323252EF24976CF70018DE3C /* NextViewController.swift */,
 				323252F024976CF70018DE3C /* NextViewController.xib */,
 				323252F3249770090018DE3C /* sdgsCollectionViewCell.swift */,
 				323252F4249770090018DE3C /* sdgsCollectionViewCell.xib */,
+			);
+			path = NextViewController;
+			sourceTree = "<group>";
+		};
+		3250717824A3617B006EF247 /* TabStripViewController */ = {
+			isa = PBXGroup;
+			children = (
 				32708D1E2499B92700097252 /* TabStripViewController.swift */,
 				32708D1F2499B92700097252 /* TabStripViewController.xib */,
+			);
+			path = TabStripViewController;
+			sourceTree = "<group>";
+		};
+		3250717924A3619D006EF247 /* SecondViewController */ = {
+			isa = PBXGroup;
+			children = (
 				32708D222499EB8A00097252 /* SecondViewController.swift */,
 				32708D232499EB8A00097252 /* SecondViewController.xib */,
-				32708D26249A8E0100097252 /* ThirdViewController.swift */,
-				32708D27249A8E0100097252 /* ThirdViewController.xib */,
 				32708D2C249A992A00097252 /* toDoTableViewCell.swift */,
 				32708D2D249A992A00097252 /* toDoTableViewCell.xib */,
+			);
+			path = SecondViewController;
+			sourceTree = "<group>";
+		};
+		3250717A24A361C6006EF247 /* AddViewController */ = {
+			isa = PBXGroup;
+			children = (
 				3241105F249AFD1B00732BC2 /* AddViewController.swift */,
 				32411060249AFD1B00732BC2 /* AddViewController.xib */,
 			);
-			path = kadai8;
+			path = AddViewController;
+			sourceTree = "<group>";
+		};
+		3250717B24A361D5006EF247 /* ThirdViewController */ = {
+			isa = PBXGroup;
+			children = (
+				32708D26249A8E0100097252 /* ThirdViewController.swift */,
+				32708D27249A8E0100097252 /* ThirdViewController.xib */,
+			);
+			path = ThirdViewController;
+			sourceTree = "<group>";
+		};
+		3250717C24A36432006EF247 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3250717D24A36457006EF247 /* UserDefaultsRepositry.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3250718224A9E334006EF247 /* TaskDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3250718324A9E377006EF247 /* TaskDetailViewController.swift */,
+				3250718424A9E377006EF247 /* TaskDetailViewController.xib */,
+			);
+			path = TaskDetailViewController;
+			sourceTree = "<group>";
+		};
+		3250718724AA195B006EF247 /* SemiModalViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3250718824AA1982006EF247 /* SemiModalViewController.swift */,
+				3250718924AA1982006EF247 /* SemiModalViewController.xib */,
+				3250719024AB4AA5006EF247 /* SemiModalTableViewCell.swift */,
+				3250719124AB4AA5006EF247 /* SemiModalTableViewCell.xib */,
+			);
+			path = SemiModalViewController;
 			sourceTree = "<group>";
 		};
 		A4F286C0928AB01C8C05F2F2 /* Pods */ = {
@@ -204,13 +316,16 @@
 			files = (
 				32411062249AFD1B00732BC2 /* AddViewController.xib in Resources */,
 				323252E82497682D0018DE3C /* LaunchScreen.storyboard in Resources */,
+				3250718624A9E377006EF247 /* TaskDetailViewController.xib in Resources */,
+				3250719324AB4AA5006EF247 /* SemiModalTableViewCell.xib in Resources */,
 				32708D252499EB8A00097252 /* SecondViewController.xib in Resources */,
-				32708D2B249A910F00097252 /* GoogleService-Info.plist in Resources */,
 				32708D29249A8E0100097252 /* ThirdViewController.xib in Resources */,
 				323252F224976CF70018DE3C /* NextViewController.xib in Resources */,
 				323252F6249770090018DE3C /* sdgsCollectionViewCell.xib in Resources */,
 				323252E52497682D0018DE3C /* Assets.xcassets in Resources */,
 				323252E32497682B0018DE3C /* Main.storyboard in Resources */,
+				3250718B24AA1982006EF247 /* SemiModalViewController.xib in Resources */,
+				3250718124A36C15006EF247 /* GoogleService-Info.plist in Resources */,
 				32708D212499B92700097252 /* TabStripViewController.xib in Resources */,
 				32708D2F249A992A00097252 /* toDoTableViewCell.xib in Resources */,
 			);
@@ -282,9 +397,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3250718524A9E377006EF247 /* TaskDetailViewController.swift in Sources */,
+				3250717E24A36457006EF247 /* UserDefaultsRepositry.swift in Sources */,
 				32411061249AFD1B00732BC2 /* AddViewController.swift in Sources */,
+				3250718A24AA1982006EF247 /* SemiModalViewController.swift in Sources */,
 				323252E02497682B0018DE3C /* ViewController.swift in Sources */,
+				3250719224AB4AA5006EF247 /* SemiModalTableViewCell.swift in Sources */,
 				32708D2E249A992A00097252 /* toDoTableViewCell.swift in Sources */,
+				3250716B24A05CF3006EF247 /* SplashViewController.swift in Sources */,
 				323252F5249770090018DE3C /* sdgsCollectionViewCell.swift in Sources */,
 				32411064249B277600732BC2 /* Task.swift in Sources */,
 				323252F124976CF70018DE3C /* NextViewController.swift in Sources */,

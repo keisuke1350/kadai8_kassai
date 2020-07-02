@@ -20,6 +20,13 @@ class TabStripViewController: ButtonBarPagerTabStripViewController {
         setupNavigationBar()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tasks = UserDefaultsRepository.loadFromUserDefaults()
+        dump(tasks)
+        
+    }
+    
 //    override func viewWillAppear(_ animated: Bool) {
 //        navigationController?.setNavigationBarHidden(true, animated: false)
 //    }

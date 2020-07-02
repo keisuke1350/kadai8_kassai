@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Task: Codable{
+class Task: Codable {
     var title: String
     var memo: String?
     var select: String

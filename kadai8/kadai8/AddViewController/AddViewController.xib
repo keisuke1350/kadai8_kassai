@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddViewController" customModule="kadai8" customModuleProvider="target">
             <connections>
+                <outlet property="SDGsImage" destination="69N-ZB-q5u" id="l9a-9V-rua"/>
                 <outlet property="memoTextView" destination="nhl-rK-2wt" id="0p0-Rp-DJt"/>
                 <outlet property="selectSDGs" destination="tFv-Op-vyP" id="SwY-ds-Tvi"/>
                 <outlet property="titleTextField" destination="YQz-Ze-hdY" id="9FM-NB-DKl"/>
@@ -58,6 +59,13 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="69N-ZB-q5u">
+                    <rect key="frame" x="157" y="420" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="KUi-li-UFT"/>
+                        <constraint firstAttribute="height" constant="100" id="vQu-0A-lAp"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
@@ -68,11 +76,13 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tFv-Op-vyP" secondAttribute="trailing" constant="20" id="BEe-YC-Zhp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HXB-of-kPE" secondAttribute="trailing" constant="20" id="FJW-76-7wH"/>
                 <constraint firstItem="nhl-rK-2wt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="KXF-TZ-gue"/>
+                <constraint firstItem="69N-ZB-q5u" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Kgx-ME-hMM"/>
                 <constraint firstItem="YQz-Ze-hdY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NQB-AV-kgo"/>
                 <constraint firstItem="HXB-of-kPE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="PXl-6b-PmM"/>
                 <constraint firstItem="tFv-Op-vyP" firstAttribute="top" secondItem="Hex-pJ-dy0" secondAttribute="bottom" constant="5" id="QUy-YC-Q8z"/>
                 <constraint firstItem="Hex-pJ-dy0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="SZy-Yr-lXA"/>
                 <constraint firstItem="YQz-Ze-hdY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="VVv-gL-eXv"/>
+                <constraint firstItem="69N-ZB-q5u" firstAttribute="top" secondItem="tFv-Op-vyP" secondAttribute="bottom" constant="20" id="Y3C-XH-2pp"/>
                 <constraint firstItem="tFv-Op-vyP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="YJD-8p-xZL"/>
                 <constraint firstItem="tFv-Op-vyP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YWc-D6-xan"/>
                 <constraint firstItem="Hex-pJ-dy0" firstAttribute="top" secondItem="nhl-rK-2wt" secondAttribute="bottom" constant="10" id="Zx7-iu-iYL"/>

@@ -21,6 +21,8 @@ class ViewController: UIViewController, UITextFieldDelegate, FUIAuthDelegate{
     
     @IBOutlet weak var authGoogleButton: UIButton!
     
+    
+    
     var authUI: FUIAuth {get { return FUIAuth.defaultAuthUI()!}}
     //認証に使用するプロバイダの選択
     let providers: [FUIAuthProvider] = [

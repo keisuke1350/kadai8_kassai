@@ -20,5 +20,6 @@ target 'kadai8' do
   pod ‘DisplaySwitcher’, '~> 2.0’
   pod 'XLPagerTabStrip', '~> 9.0'
   pod 'PKHUD'
+  pod 'FloatingPanel'
 
 end
